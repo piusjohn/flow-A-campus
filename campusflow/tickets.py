@@ -61,5 +61,19 @@ def generate_ticket_id(tickets):
 def create_ticket(title, category, urgency, affected_users, tickets):
     title, category, urgency, affected_users = validate_ticket_input(title,category,urgency,affected_users)
     ticket_id = generate_ticket_id(tickets)
+    priority = calculate_priority(urgency, affected_users)
+    status = "open"
+    assisged_to = None
+    
+    ticket = {
+    "id": ticket_id,
+    "title": title,
+    "category": category,
+    "urgency": urgency,
+    "affected_users": affected_users,
+    "priority": priority,
+    "status": status,
+    "assigned_to": assisged_to
+    }
 
-
+    return ticket
