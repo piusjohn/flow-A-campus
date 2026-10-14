@@ -58,3 +58,8 @@ def generate_ticket_id(tickets):
 
     return result
 
+def create_ticket(title, category, urgency, affected_users, tickets):
+    title, category, urgency, affected_users = validate_ticket_input(title,category,urgency,affected_users)
+    ticket_id = generate_ticket_id(tickets)
+
+
