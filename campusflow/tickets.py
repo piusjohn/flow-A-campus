@@ -64,7 +64,7 @@ def create_ticket(title, category, urgency, affected_users, tickets):
     priority = calculate_priority(urgency, affected_users)
     status = "open"
     assisged_to = None
-    
+
     ticket = {
     "id": ticket_id,
     "title": title,
@@ -77,3 +77,9 @@ def create_ticket(title, category, urgency, affected_users, tickets):
     }
 
     return ticket
+
+def add_ticket(title,category,urgency,affected_users,tickets):
+        ticket = create_ticket(title,category,urgency,affected_users,tickets)
+        tickets.append(ticket)
+        return ticket
+
