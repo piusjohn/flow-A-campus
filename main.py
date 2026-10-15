@@ -1,31 +1,28 @@
-import json
 import os
 
 from campusflow.tickets import (
+    add_note,
     add_ticket,
-    find_ticket,
     assign_ticket,
-    update_status,
-    get_work_queue,
+    find_ticket,
     generate_report,
+    get_work_queue,
+    load_tickets as _load_tickets,
+    save_tickets as _save_tickets,
+    update_status,
 )
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "tickets.json")
 
 
 def load_tickets():
-    if not os.path.exists(DATA_FILE):
-        return []
-    with open(DATA_FILE) as f:
-        tickets = json.load(f)
+    tickets = _load_tickets(DATA_FILE)
     print(f"Loaded {len(tickets)} ticket(s) from {DATA_FILE}")
     return tickets
 
 
 def save_tickets(tickets):
-    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
-    with open(DATA_FILE, "w") as f:
-        json.dump(tickets, f, indent=2)
+    return _save_tickets(DATA_FILE, tickets)
 
 
 def show_menu():
