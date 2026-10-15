@@ -8,5 +8,15 @@
     "priority": "medium",
     "status": "open",
     "assigned_to": null
+  },
+  {
+    "id": "T002",
+    "title": "hp",
+    "category": "Network",
+    "urgency": "low",
+    "affected_users": 10,
+    "priority": "high",
+    "status": "open",
+    "assigned_to": null
   }
 ]
