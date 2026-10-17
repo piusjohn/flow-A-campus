@@ -1,6 +1,6 @@
-# CampusFlow
+# Flow-A-Campus
 
-CampusFlow is a small command-line ticket tracker for campus IT support. Use it to record issues, assign them to staff, track their status, and review a prioritized work queue or summary report. Ticket data is stored locally in a JSON file.
+Flow-A-Campus is a small command-line ticket tracker for campus IT support. Use it to record issues, assign them to staff, track their status, and review a prioritized work queue or summary report. Ticket data is stored locally in a JSON file.
 
 ## Requirements
 
